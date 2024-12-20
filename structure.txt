@@ -1,0 +1,32 @@
+project_root/
+├─ src/
+│  ├─ __init__.py
+│  ├─ main.py                 # Entry point for training script
+│  ├─ cfr/
+│  │  ├─ __init__.py
+│  │  ├─ cfr_core.py          # Core CFR algorithm implementation
+│  │  ├─ regret_tables.py     # Data structures and utilities for regret tracking
+│  │  ├─ strategies.py        # Strategy calculation, averaging, and sampling
+│  │  ├─ game_definitions.py  # Definitions of the game states, actions, info sets
+│  │  ├─ utils.py             # Utility functions (e.g., for reading/writing data)
+│  ├─ rl_integration/
+│  │  ├─ __init__.py
+│  │  ├─ policy_networks.py   # If integrating neural nets for function approximation
+│  │  ├─ training_loop.py     # Combined RL and CFR training loop
+│  │  ├─ evaluation.py        # Evaluation scripts for learned strategies
+│  ├─ cluster/
+│  │  ├─ __init__.py
+│  │  ├─ distributed_setup.py # Scripts for setting up distributed training environment
+│  │  ├─ job_scripts/         # Submission scripts, etc.
+└─ tests/
+   ├─ test_cfr_core.py
+   ├─ test_regret_tables.py
+   ├─ test_strategies.py
+   ├─ ...
+   
+data/
+├─ logs/                      # Logging output
+├─ checkpoints/               # Saved model checkpoints
+└─ config/
+   ├─ game_config.yaml        # Game configuration (actions, states)
+   ├─ training_config.yaml    # Hyperparameters for training
